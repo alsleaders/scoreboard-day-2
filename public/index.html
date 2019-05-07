@@ -1,14 +1,75 @@
 <!DOCTYPE html>
 <html>
   <head lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Scoreboard Day 2</title>
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/screen.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scoreboard</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/screen.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1 class='hello-world'></h1>
+    <h1>My Score Board</h1>
+    <section class="score-area">
+      <section class="team1">
+        <h2><span class="updatedTeam1Name">Team 1</span></h2>
+        <p class="team1Score">0</p>
+      </section>
+      <section class="team2">
+        <h2><span class="updatedTeam2Name">Team 2</span></h2>
+        <p class="team2Score">0</p>
+      </section>
+    </section>
+    <section class="update-score">
+      <section class="team1">
+        <section class="team-name-1">
+          update team 1 name
+          <input
+            type="text"
+            class="team-1-new-name"
+            placeholder="Name of Team 1"
+          />
+          <button class="update-team-1-name">Update</button>
+        </section>
+        <section>
+          update team 1 score
+          <button class="team-1-add-1-button">add 1</button>
+          <button class="team-1-subtract-1-button">subtract 1</button>
+        </section>
+      </section>
+      <section class="team2">
+        <section class="team-name-2">
+          update team 2 name
+          <input
+            type="text2"
+            class="team-2-new-name"
+            placeholder="Name of Team 2"
+          />
+          <button class="update-team-2-name">Update</button>
+        </section>
+        <section>
+          update team 2 score
+          <button class="team-2-add-1-button">add 1</button>
+          <button class="team-2-subtract-1-button">subtract 1</button>
+        </section>
+      </section>
+    </section>
+    <div>
+      <!-- <section class="countdown-clock">
+        <p><span class ="updatedClock"> This is where the clock is going</span>
+          <button class="clock-start">Click when the game starts</button>
+        </p>
+      </section> -->
+      <section class="quarter-tracker">
+        <p>
+          We are in period <span class="present-quarter">1</span>
+          <button class="game-over">Game over, man. Game over.</button>
+        </p>
+      </section>
+    </div>
     <script src="/main.js" charset="utf-8"></script>
   </body>
 </html>
