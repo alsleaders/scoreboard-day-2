@@ -17,10 +17,17 @@ const startCountdown = () => {
     if (timeRemaining === 0) {
       clearInterval(interval)
     }
-    document.querySelector('.updatedClock').textContent = timeRemaining
+    const mins = Math.floor(timeRemaining / 60)
+    const secs = timeRemaining - mins * 60
+    console.log(mins, secs)
+    document.querySelector('.updatedClock').textContent = mins + ':' + secs
   }, 1000)
 }
 
+const turnOffButton = () => {
+  console.log('No button for you')
+  document.querySelector('.clock-start').disabled = true
+}
 const updateCounterTeam1InHtml = () => {
   document.querySelector('.team1Score').textContent = countOfTimesClickedT1
   if (countOfTimesClickedT1 === 4) {
@@ -36,10 +43,6 @@ const updateCounterTeam2InHtml = () => {
     document.querySelector('.team2Score').classList.add('winner')
   }
 }
-
-// const updateGameTime = () => {
-//   document.querySelector('.updatedClock').textContent = minutes + ':' + seconds
-// }
 
 const addOneToCountT1 = () => {
   console.log('button was clicked')
@@ -64,7 +67,7 @@ const addOneToCountT2 = () => {
 const subtractOneFromCountT1 = () => {
   console.log('button was clicked')
   countOfTimesClickedT1 -= 1
-  if ((countOfTimesClickedT1 = 0)) {
+  if (countOfTimesClickedT1 <= 0) {
     console.log('negative')
     document.querySelector('.team-1-subtract-1-button').disabled = true
   }
@@ -74,7 +77,7 @@ const subtractOneFromCountT1 = () => {
 const subtractOneFromCountT2 = () => {
   console.log('button was clicked')
   countOfTimesClickedT2 -= 1
-  if ((countOfTimesClickedT2 = 0)) {
+  if (countOfTimesClickedT2 <= 0) {
     console.log('negative')
     document.querySelector('.team-2-subtract-1-button').disabled = true
   }
@@ -111,6 +114,7 @@ const resetGame = () => {
   document.querySelector('.team2Score').classList.remove('winner')
   document.querySelector('.updatedClock').textContent =
     'This is where the clock is going'
+  document.querySelector('.clock-start').disabled = false
 }
 
 // let oneSecond = () => {
@@ -155,4 +159,5 @@ document
   .querySelector('.update-team-2-name')
   .addEventListener('click', updateTeamTwoName)
 document.querySelector('.game-over').addEventListener('click', resetGame)
+document.querySelector('.clock-start').addEventListener('click', turnOffButton)
 document.querySelector('.clock-start').addEventListener('click', startCountdown)
