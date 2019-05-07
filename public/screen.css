@@ -28,6 +28,7 @@ h1 {
 
 .score-area p {
   font-size: 3rem;
+  justify-content: center;
 }
 
 .update-score {
@@ -39,6 +40,7 @@ h1 {
 .update-score .team-name {
   display: flex;
   flex-direction: row;
+  align-content: center;
 }
 
 .update-score section {
@@ -66,38 +68,40 @@ input {
   align-items: center;
 }
 
-.team1Score {
-  color: turquoise;
+.winner {
+  color: black;
   background-color: lemonchiffon;
   font-weight: bolder;
   text-align: center;
+  font-size: 120%;
+  transition-property: background-color;
+  transition-duration: 3s;
 }
 
-.team2Score {
-  color: turquoise;
-  background-color: lemonchiffon;
-  font-weight: bolder;
-  text-align: center;
-}
-
-/* transition-property: background-color;
-transition-duration: 3s; */
-/* .clock-start {
+.clock-start {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  
+  align-items: center; 
 }
-.countdown-clock > p {
+
+.be-centered {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.countdown-clock {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   color: mediumslateblue;
   border: whitesmoke inset 0.5rem;
-  font-size 30rem;
+  font-size 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-} */
+}
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   body {
