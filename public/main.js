@@ -11,7 +11,7 @@ const main = () => {
 }
 
 const startCountdown = () => {
-  setInterval(() => {
+  interval = setInterval(() => {
     timeRemaining -= 1
     console.log(timeRemaining)
     if (timeRemaining === 0) {
@@ -106,8 +106,11 @@ const resetGame = () => {
   document.querySelector('.team-1-subtract-1-button').disabled = false
   document.querySelector('.team-2-subtract-1-button').disabled = false
   timeRemaining = 500
+  clearInterval(interval)
   document.querySelector('.team1Score').classList.remove('winner')
   document.querySelector('.team2Score').classList.remove('winner')
+  document.querySelector('.updatedClock').textContent =
+    'This is where the clock is going'
 }
 
 // let oneSecond = () => {
