@@ -71,9 +71,9 @@ input {
 
 .winner {
   color: black;
-  background-color: lemonchiffon;
+  background-color:lemonchiffon;
   font-family: 'Akronim', cursive;
-  font-size: 60pt;
+  /* font-size: 60pt; */
   font-weight: bolder;
   text-align: center;
   transition-property: background-color;

@@ -1,7 +1,7 @@
 let countOfTimesClickedT1 = 0
 let countOfTimesClickedT2 = 0
 let numberOfQuarters = 1
-let timeRemaining = 500
+let timeRemaining = 1200
 let interval
 
 const main = () => {
@@ -30,7 +30,7 @@ const turnOffButton = () => {
 }
 const updateCounterTeam1InHtml = () => {
   document.querySelector('.team1Score').textContent = countOfTimesClickedT1
-  if (countOfTimesClickedT1 === 4) {
+  if (countOfTimesClickedT1 === 21) {
     document.querySelector('.team1Score').textContent = 'Winner!'
     document.querySelector('.team1Score').classList.add('winner')
   }
@@ -38,7 +38,7 @@ const updateCounterTeam1InHtml = () => {
 
 const updateCounterTeam2InHtml = () => {
   document.querySelector('.team2Score').textContent = countOfTimesClickedT2
-  if (countOfTimesClickedT2 === 4) {
+  if (countOfTimesClickedT2 === 21) {
     document.querySelector('.team2Score').textContent = 'Winner!'
     document.querySelector('.team2Score').classList.add('winner')
   }
@@ -47,7 +47,7 @@ const updateCounterTeam2InHtml = () => {
 const addOneToCountT1 = () => {
   console.log('button was clicked')
   countOfTimesClickedT1 += 1
-  if (countOfTimesClickedT1 === 4) {
+  if (countOfTimesClickedT1 === 21) {
     console.log('winner')
     document.querySelector('.team-1-add-1-button').disabled = true
   }
@@ -57,7 +57,7 @@ const addOneToCountT1 = () => {
 const addOneToCountT2 = () => {
   console.log('button was clicked')
   countOfTimesClickedT2 += 1
-  if (countOfTimesClickedT2 === 4) {
+  if (countOfTimesClickedT2 === 21) {
     console.log('winner')
     document.querySelector('.team-2-add-1-button').disabled = true
   }
@@ -116,29 +116,6 @@ const resetGame = () => {
     'This is where the clock is going'
   document.querySelector('.clock-start').disabled = false
 }
-
-// let oneSecond = () => {
-//   console.log('really count down 1 second')
-//   periodTime -= 1
-//   updateGameTime()
-// }
-
-// function oneSecond() {
-//   periodTime = setInterval(subtractOne, 1000)
-// }
-
-// // // function subtractOne () {
-// // //   periodTime -= 1;
-// // }
-// const startCountdown = () => {
-//   console.log('game started')
-//   oneSecond()
-// }
-// setInterval = minutes + ':' + seconds
-
-// numberOfQuarters += 1
-// document.querySelector('.present-quarter').textContent = numberOfQuarters
-
 document.addEventListener('DOMContentLoaded', main)
 document
   .querySelector('.team-1-add-1-button')
